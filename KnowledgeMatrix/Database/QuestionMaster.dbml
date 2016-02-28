@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="QuestionMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="QuestionMasters">
+    <Type Name="QuestionMaster">
+      <Column Name="QuesNo" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" CanBeNull="false" />
+      <Association Name="QuestionMaster_QuestionDetails" Member="QuestionDetails" ThisKey="QuesNo" OtherKey="QuesNo" Type="QuestionDetails" />
+    </Type>
+  </Table>
+  <Table Name="" Member="QuestionAssociations">
+    <Type Name="QuestionAssociation">
+      <Column Name="SNo" AutoSync="Never" Type="System.String" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentQuesNo" Type="System.Int32" CanBeNull="false" />
+      <Column Name="ChildQuesNo" Type="System.Int32" CanBeNull="false" />
+      <Column Name="TotalQuestions" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="QuestionDetails">
+    <Type Name="QuestionDetails">
+      <Column Name="QuesNo" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" CanBeNull="false" />
+      <Column Name="AnswerType" Type="System.String" CanBeNull="false" />
+      <Column Name="Answer" Type="System.String" CanBeNull="false" />
+      <Column Name="QuestionOptions" Type="System.String" CanBeNull="false" />
+      <Column Name="Complexity" Type="System.String" CanBeNull="false" />
+      <Column Name="Pattern" Type="System.String" CanBeNull="false" />
+      <Column Name="CorrectAnswerDetails" Type="System.String" CanBeNull="false" />
+      <Column Name="AnswerConcept" Type="System.String" CanBeNull="false" />
+      <Column Name="QuesDetSNo" Type="System.String" CanBeNull="false" />
+      <Association Name="QuestionMaster_QuestionDetails" Member="QuestionMaster" ThisKey="QuesNo" OtherKey="QuesNo" Type="QuestionMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
