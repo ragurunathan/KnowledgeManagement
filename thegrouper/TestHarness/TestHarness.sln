@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "TestHarness.csproj", "{60BEFA34-8635-47CE-A6B8-E19B46E00B02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D5D88EB0-23B9-46CE-B23C-C6245ECF023C} = {D5D88EB0-23B9-46CE-B23C-C6245ECF023C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeVendor.Controls", "..\Grouper\CodeVendor.Controls.csproj", "{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{60BEFA34-8635-47CE-A6B8-E19B46E00B02}.Debug.ActiveCfg = Debug|.NET
+		{60BEFA34-8635-47CE-A6B8-E19B46E00B02}.Debug.Build.0 = Debug|.NET
+		{60BEFA34-8635-47CE-A6B8-E19B46E00B02}.Release.ActiveCfg = Release|.NET
+		{60BEFA34-8635-47CE-A6B8-E19B46E00B02}.Release.Build.0 = Release|.NET
+		{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}.Debug.ActiveCfg = Debug|.NET
+		{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}.Debug.Build.0 = Debug|.NET
+		{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}.Release.ActiveCfg = Release|.NET
+		{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
