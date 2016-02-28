@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F82643B3-F0C4-49F2-8439-691F6578ECE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KnowledgeMatrix</RootNamespace>
+    <AssemblyName>KnowledgeMatrix</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Deploy\myapplication\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BB4016807A074CA10D3CEAB2BB3EFE13F4EADD81</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KnowledgeMatrix_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>KM 32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExtendedRichTextBox">
+      <HintPath>DependentDll\ExtendedRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Khendys.Controls.ExRichTextBox">
+      <HintPath>DependentDll\Khendys.Controls.ExRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress">
+      <HintPath>DependentDll\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>DependentDll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\eTutor.cs" />
+    <Compile Include="Database\QuestionManagement.cs" />
+    <Compile Include="Forms\Admin\LoadWebPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\LoadWebPage.Designer.cs">
+      <DependentUpon>LoadWebPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\License.cs" />
+    <Compile Include="Cryptography\EntropyGenerator.cs" />
+    <Compile Include="Cryptography\FileCryptography.cs" />
+    <Compile Include="Cryptography\Hari.cs" />
+    <Compile Include="Cryptography\Rijndael.cs" />
+    <Compile Include="Database\AdminDatabaseMgmt.cs" />
+    <Compile Include="Database\LicenseDetailInfo.cs" />
+    <Compile Include="Database\QuestionAssociation.cs" />
+    <Compile Include="Database\QuestionDetails.cs" />
+    <Compile Include="Database\QuestionMast.cs" />
+    <Compile Include="Database\QuestionMaster.cs">
+      <DependentUpon>QuestionMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\QuestionPaper.cs" />
+    <Compile Include="DataManagement\ObjectXMLSerializer.cs" />
+    <Compile Include="Forms\MockTest\CaptureMockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MockTest\CaptureMockDetails.Designer.cs">
+      <DependentUpon>CaptureMockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MockTest\ViewMockResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MockTest\ViewMockResult.Designer.cs">
+      <DependentUpon>ViewMockResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\FAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\FAQ.Designer.cs">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\ContactUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\ContactUs.Designer.cs">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\eTutor\frmeTutorManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\eTutor\frmeTutorManage.Designer.cs">
+      <DependentUpon>frmeTutorManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\frmFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\frmFind.designer.cs">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\frmMain1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\frmMain1.designer.cs">
+      <DependentUpon>frmMain1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\FrmQuestionsDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\FrmQuestionsDisplay.Designer.cs">
+      <DependentUpon>FrmQuestionsDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\frmReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\frmReplace.designer.cs">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\Grid.Designer.cs">
+      <DependentUpon>Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\LicenseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\LicenseDetail.Designer.cs">
+      <DependentUpon>LicenseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MockTest\MockTestHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MockTest\MockTestHome.Designer.cs">
+      <DependentUpon>MockTestHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\PurchaseManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\PurchaseManagement.Designer.cs">
+      <DependentUpon>PurchaseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\eTutor\eTutor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\eTutor\eTutor.Designer.cs">
+      <DependentUpon>eTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\QuestionBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\QuestionBank.designer.cs">
+      <DependentUpon>QuestionBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\LicenseManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\LicenseManagement.Designer.cs">
+      <DependentUpon>LicenseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\CaptureNodeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\CaptureNodeName.designer.cs">
+      <DependentUpon>CaptureNodeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\QuestionPaper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\QuestionPaper.Designer.cs">
+      <DependentUpon>QuestionPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\QuestionPaperDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionPaper\QuestionPaperDisplay.Designer.cs">
+      <DependentUpon>QuestionPaperDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\QuestionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionBank\QuestionsForm.Designer.cs">
+      <DependentUpon>QuestionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\SearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\SearchUser.Designer.cs">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\SerialBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\SerialBox.designer.cs">
+      <DependentUpon>SerialBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TopMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TopMenu.Designer.cs">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ChartMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ChartMaster.Designer.cs">
+      <DependentUpon>ChartMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmMasterDetailGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmMasterDetailGrid.designer.cs">
+      <DependentUpon>frmMasterDetailGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\AnimationUtil.cs" />
+    <Compile Include="Framework\Authorization.cs" />
+    <Compile Include="Framework\EnumerableExtensions.cs" />
+    <Compile Include="Framework\EventArgs.cs" />
+    <Compile Include="Framework\GelButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\Grid\DataClass\OrderDetailBindClass.cs" />
+    <Compile Include="Framework\Grid\DataClass\OrderMasterBindClass.cs" />
+    <Compile Include="Framework\Grid\Helper\ShanuDGVHelper.cs" />
+    <Compile Include="Framework\LogEntry.cs" />
+    <Compile Include="Framework\ManageNavigation.cs" />
+    <Compile Include="Forms\Common\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Rich.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\Utility.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Database\QuestionMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings1.cs" />
+    <EmbeddedResource Include="Forms\Admin\LoadWebPage.resx">
+      <DependentUpon>LoadWebPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MockTest\CaptureMockDetails.resx">
+      <DependentUpon>CaptureMockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MockTest\ViewMockResult.resx">
+      <DependentUpon>ViewMockResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\FAQ.resx">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\ContactUs.resx">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\eTutor\frmeTutorManage.resx">
+      <DependentUpon>frmeTutorManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\frmFind.resx">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionBank\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionBank\frmMain1.resx">
+      <DependentUpon>frmMain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionPaper\FrmQuestionsDisplay.resx">
+      <DependentUpon>FrmQuestionsDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\frmReplace.resx">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\LicenseDetail.resx">
+      <DependentUpon>LicenseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MockTest\MockTestHome.resx">
+      <DependentUpon>MockTestHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\PurchaseManagement.resx">
+      <DependentUpon>PurchaseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\eTutor\eTutor.resx">
+      <DependentUpon>eTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionBank\QuestionBank.resx">
+      <DependentUpon>QuestionBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\LicenseManagement.resx">
+      <DependentUpon>LicenseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionBank\CaptureNodeName.resx">
+      <DependentUpon>CaptureNodeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionPaper\QuestionPaper.resx">
+      <DependentUpon>QuestionPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionPaper\QuestionPaperDisplay.resx">
+      <DependentUpon>QuestionPaperDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionBank\QuestionsForm.resx">
+      <DependentUpon>QuestionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\SearchUser.resx">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\SerialBox.resx">
+      <DependentUpon>SerialBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TopMenu.resx">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ChartMaster.resx">
+      <DependentUpon>ChartMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmMasterDetailGrid.resx">
+      <DependentUpon>frmMasterDetailGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ExamApp.Forms.QuestionPaper.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Database\QuestionMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QuestionMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\QuestionMaster.dbml.layout">
+      <DependentUpon>QuestionMaster.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Framework\Grid\Images\1.gif" />
+    <Content Include="Framework\Grid\Images\expand.png" />
+    <Content Include="Framework\Grid\Images\toggle.png" />
+    <Content Include="Images\1.gif" />
+    <Content Include="Images\expand.png" />
+    <Content Include="Images\toggle.png" />
+    <Content Include="KM 32x32.ico" />
+    <None Include="Resources\toggle.png" />
+    <None Include="Resources\expand.png" />
+    <None Include="Resources\1.gif" />
+    <None Include="Resources\LM_Register.png" />
+    <None Include="Resources\LM_Import-register-File.png" />
+    <None Include="Resources\LM_Generate-License-110x26.png" />
+    <None Include="Resources\LM_Clear-110X26.png" />
+    <None Include="Resources\LM_Cancel.png" />
+    <None Include="Resources\LM_Activate.png" />
+    <None Include="Resources\QP_Save.png" />
+    <None Include="Resources\QP_Mock-test.png" />
+    <None Include="Resources\QP_Generate-Question.png" />
+    <None Include="Resources\QP_Generate-Q-&amp;-A.png" />
+    <None Include="Resources\QP_Generate-OMR-sheet.png" />
+    <None Include="Resources\QP_Generate-Answer.png" />
+    <None Include="Resources\QP_Clear.png" />
+    <None Include="Resources\First.png" />
+    <None Include="Resources\skip.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Save-&amp;-Cont.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\mark-for-review.png" />
+    <None Include="Resources\Last.png" />
+    <None Include="Resources\Go.png" />
+    <None Include="Resources\Complete.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\ET_Save.png" />
+    <None Include="Resources\MT_skipped1.png" />
+    <None Include="Resources\MT_notattempted1.png" />
+    <None Include="Resources\MT_markforreview1.png" />
+    <None Include="Resources\MT_attempted.png" />
+    <None Include="Resources\Purchase-Mangement.png" />
+    <None Include="Resources\PK_Select.png" />
+    <None Include="Resources\PK_Purchase-history.png" />
+    <None Include="Resources\PK_Done.png" />
+    <None Include="Resources\PK_Customer-Management.png" />
+    <None Include="Resources\PK_Close.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Save-page-75X23.png" />
+    <None Include="Resources\Quiz.png" />
+    <None Include="Resources\Print-75X23.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\Insert-page-75X23.png" />
+    <None Include="Resources\Go-46X23.png" />
+    <None Include="Resources\Done-75X23.png" />
+    <None Include="Resources\Delete-page-75X23.png" />
+    <None Include="Resources\Close-75X23.png" />
+    <None Include="Resources\Re-launch.png" />
+    <None Include="Resources\Launch.png" />
+    <None Include="Resources\skipped1.png" />
+    <None Include="Resources\skipped.png" />
+    <None Include="Resources\notattempted1.png" />
+    <None Include="Resources\markforreview1.png" />
+    <None Include="Resources\attempted1.png" />
+    <None Include="Resources\LM_Clear.png" />
+    <None Include="Resources\KT_Quiz-70-X-23.png" />
+    <None Include="Resources\Quiz-70-X-23.png" />
+    <None Include="Resources\DefaultIcon.png" />
+    <None Include="Resources\notattempted.png" />
+    <None Include="Resources\markforreview.png" />
+    <None Include="Resources\attempted.png" />
+    <None Include="Resources\E-school-Temp.png" />
+    <None Include="Resources\Web-banner.png" />
+    <None Include="Resources\body1.png" />
+    <None Include="Resources\Knowledge-Assesment_ico.png" />
+    <None Include="Resources\Knowledge Tutuor.png" />
+    <None Include="Resources\Knowledge Evalutor.png" />
+    <None Include="Resources\Knowledge Base.png" />
+    <None Include="Resources\dash-board.png" />
+    <None Include="Resources\131X259.png" />
+    <None Include="Resources\About.png" />
+    <None Include="Resources\Template-body1.png" />
+    <None Include="Resources\Web-banner 1.png" />
+    <None Include="Resources\Template-body.png" />
+    <None Include="Resources\Template 670X921.jpg" />
+    <None Include="Resources\Product.png" />
+    <None Include="Resources\LOGO.png" />
+    <None Include="Resources\Logo 259x259.png" />
+    <None Include="Resources\License.png" />
+    <None Include="Resources\Knowledge-Tutor.png" />
+    <None Include="Resources\Knowledge-Evaluator.png" />
+    <None Include="Resources\Knowledge-Base.png" />
+    <None Include="Resources\Knowledge-Assessment.png" />
+    <None Include="Resources\KM 32x32.png" />
+    <None Include="Resources\Image-3.png" />
+    <None Include="Resources\Image-2.png" />
+    <None Include="Resources\Image-1.png" />
+    <None Include="Resources\ICON.png" />
+    <None Include="Resources\FQA.png" />
+    <None Include="Resources\Contact-us.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\Products.png" />
+    <None Include="Resources\Knowledge-Evalutor.png" />
+    <None Include="Resources\Knowledge-Assesment.png" />
+    <None Include="Resources\FAQ.png" />
+    <None Include="Resources\Contact.png" />
+    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\DashboardIcon.png" />
+    <None Include="bin\Debug\attempted.png" />
+    <None Include="bin\Debug\markforreview.png" />
+    <None Include="bin\Debug\notattempted.png" />
+    <None Include="bin\Debug\skipped.png" />
+    <None Include="Resources\eschools.png" />
+    <None Include="Resources\eschools1.png" />
+    <None Include="Resources\ic_input_add.png" />
+    <None Include="Resources\edit_query.png" />
+    <None Include="Resources\ic_delete.png" />
+    <None Include="Resources\ic_media_previous.png" />
+    <None Include="Resources\Header.jpg" />
+    <None Include="Resources\Header1.jpg" />
+    <None Include="Resources\Header1.png" />
+    <None Include="Resources\btn_SearchBtn[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="swf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\prettygoodsplashscreen\SplashScreen\SplashScreen.csproj">
+      <Project>{743EDB81-D2AC-4A52-A313-50BD4229401B}</Project>
+      <Name>SplashScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilterTextBox\FilterTextBox\FilterTextBox\FilterTextBox.csproj">
+      <Project>{03F23940-2653-4022-912B-070ED5ED7D55}</Project>
+      <Name>FilterTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\thegrouper\Grouper\CodeVendor.Controls.csproj">
+      <Project>{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}</Project>
+      <Name>CodeVendor.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
