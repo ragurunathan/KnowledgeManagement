@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KnowledgeMatrix.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.0.0.0</Value>
+    </Setting>
+    <Setting Name="Authenicated" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EEEEEEEE</Value>
+    </Setting>
+    <Setting Name="SetAuth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PanelWidth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1014</Value>
+    </Setting>
+    <Setting Name="PanelHeight" Type="System.String" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="ProductKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DateOfActivation" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastAccessedDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Header" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pathways Foundation</Value>
+    </Setting>
+    <Setting Name="Footer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Digital Warriors.Copyright Reserved 2015</Value>
+    </Setting>
+    <Setting Name="DaysToAdd" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Administrator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.1</Value>
+    </Setting>
+    <Setting Name="RegistrationKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">e294c7186c45423a92c0bce5f</Value>
+    </Setting>
+    <Setting Name="OrganizationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="eTutorQuestions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="SharePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\LT016644\CrashDump</Value>
+    </Setting>
+    <Setting Name="QuestionPaperQuestions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
